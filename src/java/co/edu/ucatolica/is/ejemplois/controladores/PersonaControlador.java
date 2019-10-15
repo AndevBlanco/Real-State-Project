@@ -43,20 +43,25 @@ public class PersonaControlador extends HttpServlet {
         
         if (oper != null && oper.equals("crear"))
         {        
-            String nom = request.getParameter("nombre");
-            String ape = request.getParameter("apellido");
+            String correo = request.getParameter("email");
+            String contraseña = request.getParameter("pass");
+            String documento = request.getParameter("idn");
+            String nombre = request.getParameter("name");
+            String apellido = request.getParameter("lname");
 
             PersonaDTO p = new PersonaDTO();
-            p.setIdentificacion("102030");
-            p.setNombre(nom);
-            p.setApellido(ape);
+            p.setEmail(correo);
+            p.setPass(contraseña);
+            p.setIdn(documento);
+            p.setName(nombre);
+            p.setLname(apellido);
             
             boolean rta = pdao.crearPersona(p);
 
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
-            request.setAttribute("info", nom + " - " + ape + " - " + rta);
-            pag = "./jsp/persona_crear_rta.jsp";
+            request.setAttribute("info", nombre + " - " + apellido);
+            pag = "./persona_crear_rta.jsp";
         }
         else if (oper != null && oper.equals("consultar"))
         {
@@ -67,7 +72,7 @@ public class PersonaControlador extends HttpServlet {
             //sesion.setAttribute("listap", lista);
             request.setAttribute("listap", lista);             
             
-            pag = "./jsp/persona_consultar.jsp";
+            pag = "./persona_consultar.jsp";
         }
         
         

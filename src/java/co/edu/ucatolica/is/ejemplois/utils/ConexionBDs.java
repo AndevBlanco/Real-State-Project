@@ -20,7 +20,7 @@ public class ConexionBDs {
         // Set dataSource Properties
         dataSource.setServerName("localhost");
         dataSource.setPortNumber(3306);
-        dataSource.setDatabaseName("prueba1");
+        dataSource.setDatabaseName("persona");
         dataSource.setUser("root");
         dataSource.setPassword("root");
         return dataSource;

@@ -13,10 +13,12 @@ package co.edu.ucatolica.is.ejemplois.DTOs;
  */
 public class PersonaDTO {
     
-    private int persona_id = 0;
-    private String identificacion = "";
-    private String nombre = "";
-    private String apellido = "";
+    private int persona_id=0;
+    private String email="";
+    private String pass="";
+    private String idn="";
+    private String name="";
+    private String lname="";
 
     public int getPersona_id() {
         return persona_id;
@@ -25,29 +27,46 @@ public class PersonaDTO {
     public void setPersona_id(int persona_id) {
         this.persona_id = persona_id;
     }
-    
-    public String getIdentificacion() {
-        return identificacion;
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
-    }    
-
-    public String getNombre() {
-        return nombre;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getPass() {
+        return pass;
     }
 
-    public String getApellido() {
-        return apellido;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public String getIdn() {
+        return idn;
     }
+
+    public void setIdn(String idn) {
+        this.idn = idn;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLname() {
+        return lname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }  
+
     
 }
