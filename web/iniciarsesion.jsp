@@ -65,7 +65,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<a href=""><i class="fa fa-user-circle-o"></i> Registrarse</a>
+                                                    <a href="./persona_crear.jsp"><i class="fa fa-user-circle-o"></i> Registrarse</a>
 							<a href=""><i class="fa fa-sign-in"></i> Iniciar sesion</a>
 						</div>
 					</div>
@@ -99,18 +99,21 @@
 		<div class="container hero-text text-white">
 				<h1>Iniciar sesión</h1>
                     <div class="row">
-                        <div class="col-lg-12" style="margin: auto; margin-top: 1%;">
+                        <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" required>
-                                    <div class="col-lg-12">
+                                <form class="form-inline" action="./Persona" method="post">
+                                    <div class="col-lg-6">
                                         <div class="form-group">
-                                        	<label class="form-control-label" for="email">Correo electrónico</label>
-                                            <input class="form-control" type="email" placeholder="email" id="email" required>
-                                            <label class="form-control-label" for="pass">Contraseña</label>
-                                            <input class="form-control" type="password" placeholder="Contraseña" id="pass" required>
+                                            <label class="form-control-label" for="email">Correo electrónico</label>
+                                            <input class="form-control w-100" type="email" placeholder="email" name="email" required>
                                         </div>
                                     </div> 
-                                    <button class="btn btn-primary w-100" style="margin-top: 4%;">Iniciar sesión</button>
+                                    <div class="col-lg-6">
+                                        <label class="form-control-label" for="pass">Contraseña</label>
+                                        <input class="form-control w-100" type="password" placeholder="Contraseña" name="pass" required>
+                                    </div>
+                                    <input type="hidden" name="operacion" value="crear" >
+                                    <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Iniciar sesión</button>
                                 </form>
                             </div>
                         </div>

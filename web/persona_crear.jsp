@@ -82,8 +82,8 @@
 						</div>
 						<ul class="main-menu">
 							<li><a href="./index.jsp">Inicio</a></li>
-							<li><a href="./about.jsp">Acerca de</a></li>
-							<li><a href="./contact.jsp">Contactenos</a></li>
+							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
+							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
 							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
@@ -121,9 +121,8 @@
                                         </div>
                                     </div>
                                     <input type="hidden" name="operacion" value="crear" >
-                                    <input type="submit" name="Enviar"/>
-                                    <button class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse</button>
-                                    <button class="btn btn-danger w-100" style="margin-top: 4%;">Registrarse como otro tipo de cliente</button>
+                                    <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse</button>
+                                    <button class="btn btn-danger w-100" style="margin-top: 4%;" required="false">Registrarse como otro tipo de cliente</button>
                                 </form>
                             </div>
                         </div>

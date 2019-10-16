@@ -95,7 +95,7 @@
 
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="./resources/img/page-top-bg.jpg">
+	<section class="page-top-section set-bg" data-setbg="../img/page-top-bg.jpg">
 		<div class="container text-white">
 			<h2>Contactenos</h2>
 		</div>
@@ -105,7 +105,7 @@
 	<!-- Breadcrumb -->
 	<div class="site-breadcrumb">
 		<div class="container">
-			<a href=""><i class="fa fa-home"></i>Inicio</a>
+			<a href="../../index.jsp"><i class="fa fa-home"></i>Inicio</a>
 			<span><i class="fa fa-angle-right"></i>Contactenos</span>
 		</div>
 	</div>
@@ -121,7 +121,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
-					<img src="./resources/img/contact.jpg" alt="">
+					<img src="../img/contact.jpg" alt="">
 				</div>
 				<div class="col-lg-6">
 					<div class="contact-right">
@@ -155,19 +155,19 @@
 		<div class="container">
 			<div class="clients-slider owl-carousel">
 				<a href="#">
-					<img src="./resources/img/partner/1.png" alt="">
+					<img src="../img/partner/1.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/2.png" alt="">
+					<img src="../img/partner/2.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/3.png" alt="">
+					<img src="../img/partner/3.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/4.png" alt="">
+					<img src="../img/partner/4.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/5.png" alt="">
+					<img src="../img/partner/5.png" alt="">
 				</a>
 			</div>
 		</div>
@@ -176,11 +176,11 @@
 
 
 	<!-- Footer section -->
-	<footer class="footer-section set-bg" data-setbg="./resources/img/footer-bg.jpg">
+	<footer class="footer-section set-bg" data-setbg="../img/footer-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 footer-widget" >
-					<img src="./resources/img/logo.png">
+					<img src="../img/logo.png">
 					<p>InAlpes</p>
 					<div class="social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
@@ -241,15 +241,15 @@
 	<!-- Footer section end -->
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="./resources/js/jquery-3.2.1.min.js"></script>
-	<script src="./resources/js/bootstrap.min.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
-	<script src="./resources/js/masonry.pkgd.min.js"></script>
-	<script src="./resources/js/magnific-popup.min.js"></script>
-	<script src="./resources/js/main.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/masonry.pkgd.min.js"></script>
+	<script src="../js/magnific-popup.min.js"></script>
+	<script src="../js/main.js"></script>
 
 	<!-- load for map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
-	<script src="js/map.js"></script>
+	<script src="../js/map.js"></script>
 </body>
 </html>

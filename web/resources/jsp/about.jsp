@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>LERAMIZ - Landing Page Template</title>
+	<title>InAlpes</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="LERAMIZ Landing Page Template">
 	<meta name="keywords" content="LERAMIZ, unica, creative, html">
@@ -22,11 +22,11 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./resources/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="./resources/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="./resources/css/animate.css"/>
-	<link rel="stylesheet" href="./resources/css/owl.carousel.css"/>
-	<link rel="stylesheet" href="./resources/css/style.css"/>
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/animate.css"/>
+	<link rel="stylesheet" href="../css/owl.carousel.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -76,12 +76,12 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="site-navbar">
-						<a href="#" class="site-logo"><img src="./resources/img/logo.png" alt=""></a>
+						<a href="#" class="site-logo"><img src="../img/logo.png" alt=""></a>
 						<div class="nav-switch">
 							<i class="fa fa-bars"></i>
 						</div>
 						<ul class="main-menu">
-							<li><a href="index.jsp">Inicio</a></li>
+							<li><a href="../../index.jsp">Inicio</a></li>
 							<li><a href="about.jsp">Acerca de</a></li>
 							<li><a href="contact.jsp">Contactenos</a></li>
 						</ul>
@@ -94,7 +94,7 @@
 
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="./resources/img/page-top-bg.jpg">
+	<section class="page-top-section set-bg" data-setbg="../img/page-top-bg.jpg">
 		<div class="container text-white">
 			<h2>Quienes somos</h2>
 		</div>
@@ -112,7 +112,7 @@
 	<!-- page -->
 	<section class="page-section">
 		<div class="container">
-			<img class="mb-5" src="./resources/img/about.jpg" alt="">
+			<img class="mb-5" src="../img/about.jpg" alt="">
 			<div class="row about-text">
 				<div class="col-xl-6 about-text-left">
 					<h5>Quienes somos</h5>
@@ -144,19 +144,19 @@
 		<div class="container">
 			<div class="clients-slider owl-carousel">
 				<a href="#">
-					<img src="./resources/img/partner/1.png" alt="">
+					<img src="../img/partner/1.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/2.png" alt="">
+					<img src="../img/partner/2.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/3.png" alt="">
+					<img src="../img/partner/3.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/4.png" alt="">
+					<img src="../img/partner/4.png" alt="">
 				</a>
 				<a href="#">
-					<img src="./resources/img/partner/5.png" alt="">
+					<img src="../img/partner/5.png" alt="">
 				</a>
 			</div>
 		</div>
@@ -165,11 +165,11 @@
 
 
 	<!-- Footer section -->
-	<footer class="footer-section set-bg" data-setbg="./resources/img/footer-bg.jpg">
+	<footer class="footer-section set-bg" data-setbg="../img/footer-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 footer-widget" >
-					<img src="./resources/img/logo.png">
+					<img src="../img/logo.png">
 					<p>InAlpes</p>
 					<div class="social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
@@ -230,11 +230,11 @@
 	<!-- Footer section end -->
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="./resources/js/jquery-3.2.1.min.js"></script>
-	<script src="./resources/js/bootstrap.min.js"></script>
-	<script src="./resources/js/owl.carousel.min.js"></script>
-	<script src="./resources/js/masonry.pkgd.min.js"></script>
-	<script src="./resources/js/magnific-popup.min.js"></script>
-	<script src="./resources/js/main.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/masonry.pkgd.min.js"></script>
+	<script src="../js/magnific-popup.min.js"></script>
+	<script src="../js/main.js"></script>
 </body>
 </html>

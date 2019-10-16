@@ -82,9 +82,9 @@
 						</div>
 						<ul class="main-menu">
 							<li><a href="./index.jsp">Inicio</a></li>
-							<li><a href="./about.jsp">Acerca de</a></li>
-							<li><a href="./contact.jsp">Contactenos</a></li>
-							<li><a href="./consultar.jsp">Consultar usuario</a></li>
+							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
+							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
+							<li><a href="./persona_crear.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>
@@ -283,7 +283,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6 footer-widget">
 					<div class="double-menu-widget">
-						<h5 class="fw-title">Lugares populares/h5>
+                                            <h5 class="fw-title">Lugares populares</h5>
 						<ul>
 							<li><a href="">Bogota</a></li>
 							<li><a href="">Cali</a></li>
