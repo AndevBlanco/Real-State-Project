@@ -103,7 +103,7 @@
                                 <form class="form-inline" action="./Persona" method="post">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                        	<label class="form-control-label" for="email">Correo electrónico</label>
+                                            <label class="form-control-label" for="email">Correo electrónico</label>
                                             <input class="form-control" type="email" placeholder="email" name="email" required>
                                             <label class="form-control-label" for="pass">Contraseña</label>
                                             <input class="form-control" type="password" placeholder="Contraseña" name="pass" required>
@@ -119,9 +119,8 @@
                                             <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="operacion" value="crear" >
-                                    <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse</button>
-                                    <button class="btn btn-danger w-100" style="margin-top: 4%;" required="false">Registrarse como otro tipo de cliente</button>
+                                    <button type="submit"  name="operacion" value="crearAdmin" class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse como administrador</button>
+                                    <button type="submit"  name="operacion" value="crearUser" class="btn btn-danger w-100" style="margin-top: 4%;">Registrarse como usuario</button>
                                 </form>
                             </div>
                         </div>

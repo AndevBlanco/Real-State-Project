@@ -41,7 +41,7 @@ public class PersonaControlador extends HttpServlet {
         String oper = request.getParameter("operacion");
         PersonaDAO pdao = new PersonaDAO();
         
-        if (oper != null && oper.equals("crear"))
+        if (oper != null && oper.equals("crearAdmin"))
         {        
             String correo = request.getParameter("email");
             String contraseña = request.getParameter("pass");
@@ -62,6 +62,28 @@ public class PersonaControlador extends HttpServlet {
             
             request.setAttribute("info", correo + " - " + contraseña + " - " + documento + " - " + nombre + " - " + " - " + apellido);
             pag = "./persona_crear_rta.jsp";
+        }
+        else if (oper != null && oper.equals("crearUser"))
+        {        
+            String correo = request.getParameter("email");
+            String contraseña = request.getParameter("pass");
+            String documento = request.getParameter("idn");
+            String nombre = request.getParameter("name");
+            String apellido = request.getParameter("lname");
+
+            PersonaDTO p = new PersonaDTO();
+            p.setEmail(correo);
+            p.setPass(contraseña);
+            p.setIdn(documento);
+            p.setName(nombre);
+            p.setLname(apellido);
+            
+            boolean rta = pdao.crearPersona(p);
+
+            //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
+            
+            request.setAttribute("info", correo + " - " + contraseña + " - " + documento + " - " + nombre + " - " + " - " + apellido);
+            pag = "./persona_crear_rta2.jsp";
         }
         else if (oper != null && oper.equals("consultar"))
         {
