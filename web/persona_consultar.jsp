@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO"%>
+<%@page import="co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,9 +32,11 @@
         %>
         <table>
             <tr>
-                <td><%=p.getIdentificacion()%></td>
-                <td><%=p.getNombre()%></td>
-                <td><%=p.getApellido()%></td>
+                <td><%=p.getEmail()%></td>
+                <td><%=p.getPass()%></td>
+                <td><%=p.getIdn()%></td>
+                <td><%=p.getName()%></td>
+                <td><%=p.getLname()%></td>
             </tr>
         </table>
         <%      }

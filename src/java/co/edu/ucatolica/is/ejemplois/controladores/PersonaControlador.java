@@ -60,7 +60,7 @@ public class PersonaControlador extends HttpServlet {
 
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
-            request.setAttribute("info", nombre + " - " + apellido);
+            request.setAttribute("info", correo + " - " + contraseña + " - " + documento + " - " + nombre + " - " + " - " + apellido);
             pag = "./persona_crear_rta.jsp";
         }
         else if (oper != null && oper.equals("consultar"))
@@ -122,3 +122,4 @@ public class PersonaControlador extends HttpServlet {
     }// </editor-fold>
 
 }
+

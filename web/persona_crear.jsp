@@ -84,7 +84,7 @@
 							<li><a href="./index.jsp">Inicio</a></li>
 							<li><a href="./about.jsp">Acerca de</a></li>
 							<li><a href="./contact.jsp">Contactenos</a></li>
-							<li><a href="./consultar.jsp">Consultar usuario</a></li>
+							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>
@@ -101,7 +101,7 @@
                     <div class="row">
                         <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" action="../Persona" method="post">
+                                <form class="form-inline" action="./Persona" method="post">
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                         	<label class="form-control-label" for="email">Correo electrónico</label>
@@ -120,6 +120,8 @@
                                             <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="operacion" value="crear" >
+                                    <input type="submit" name="Enviar"/>
                                     <button class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse</button>
                                     <button class="btn btn-danger w-100" style="margin-top: 4%;">Registrarse como otro tipo de cliente</button>
                                 </form>

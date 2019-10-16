@@ -33,13 +33,15 @@ public class PersonaDAO {
         try {
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
             String query = " insert into persona "
-                    + " (identificacion, nombre_1, apellido_1)"
-                    + " values (?, ?, ?)";
+                    + " (email, pass, idn, name, lname)"
+                    + " values (?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString (1, p.getIdentificacion());
-            preparedStmt.setString (2, p.getNombre());
-            preparedStmt.setString (3, p.getApellido());
+            preparedStmt.setString (1, p.getEmail());
+            preparedStmt.setString (2, p.getPass());
+            preparedStmt.setString (3, p.getIdn());
+            preparedStmt.setString (4, p.getName());
+            preparedStmt.setString (5, p.getLname());
 
             // execute the preparedstatement
             preparedStmt.execute();
@@ -70,9 +72,12 @@ public class PersonaDAO {
             {
                 PersonaDTO p = new PersonaDTO();
                 
-                p.setIdentificacion(rs.getString("identificacion"));
-                p.setNombre(rs.getString("nombre_1"));
-                p.setApellido(rs.getString("apellido_1"));
+                p.setEmail(rs.getString("email"));
+                p.setPass(rs.getString("pass"));
+                p.setIdn(rs.getString("idn"));
+                p.setName(rs.getString("name"));
+                p.setLname(rs.getString("lname"));
+
                 
                 lista.add(p);
             }
