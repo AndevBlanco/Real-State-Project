@@ -84,7 +84,8 @@
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
 							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
-                                                        <li><a href="./inmueble_creara.jsp">Crear inmueble para arrendar</a></li>
+                                                        <li><a href="./persona_eliminar.jsp">Eliminar usuario</a></li>
+                                                        <li><a href="./inmueble_creara.jsp">Crear inmueble</a></li>
 						</ul>
 					</div>
 				</div>

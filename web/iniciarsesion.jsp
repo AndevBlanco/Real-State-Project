@@ -97,7 +97,7 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-				<h1>Iniciar sesión</h1>
+                    <h1>Iniciar sesión</h1>
                     <div class="row">
                         <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">

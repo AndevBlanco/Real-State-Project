@@ -84,7 +84,6 @@
 							<li><a href="./index.jsp">Inicio</a></li>
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
-							<li><a href="./persona_crear.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>

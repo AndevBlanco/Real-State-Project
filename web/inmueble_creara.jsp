@@ -77,7 +77,6 @@
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
 							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
-                                                        <li><a href="./inmueble_creara.jsp">Crear inmueble para arrendar</a></li>
 						</ul>
 					</div>
 				</div>
@@ -92,20 +91,29 @@
 		<div class="container hero-text text-white">
                     <h1>Crear inmueble para arrendar</h1>
                     <div class="row">
-                        <div class="col-lg-12" style="margin: auto; margin-top: 1%;">
+                        <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" required>
-                                    <div class="col-lg-12">
+                                <form class="form-inline" action="./InmuebleControlador" method="post" required>
+                                    <div class="col-lg-6">
                                         <div class="form-group">
-                                        	<label class="form-control-label" for="site">Descripción del sitio</label>
-                                                <textarea class="form-control" rows="3" placeholder="Descripción" id="site" required></textarea>
+                                            <label class="form-control-label" for="idn">Documento del usuario</label>
+                                            <input class="form-control" type="text" placeholder="Documento" id="idn" required/>
+                                            <label class="form-control-label" for="place">Descripción del sitio</label>
+                                            <textarea class="form-control" rows="3" placeholder="Descripción" id="place" required></textarea>
                                             <label class="form-control-label" for="cost">Precio de arriendo</label>
-                                            <input class="form-control" type="text" placeholder="cost" id="cost" required/>
+                                            <input class="form-control" type="text" placeholder="costo" id="cost" required/>
+                                        </div>
+                                    </div> 
+                                   <div class="col-lg-6">
+                                        <div class="form-group">
                                             <label class="form-control-label" for="rut">RUT</label>
                                             <input class="form-control" type="text" placeholder="RUT" id="rut" required/>
+                                            <label class="form-control-label" for="name">Nombre usuario:</label>
+                                            <input class="form-control" type="text" placeholder="Nombre" id="name" required/>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary w-100" style="margin-top: 4%;">Crear inmueble</button>
+                                    <input type="hidden" name="operacion" value="crear" >
+                                    <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Registrar inmueble</button>
                                 </form>
                             </div>
                         </div>

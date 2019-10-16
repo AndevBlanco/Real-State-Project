@@ -66,7 +66,7 @@
 						</div>
 						<div class="user-panel">
 							<a href=""><i class="fa fa-user-circle-o"></i> Registrarse</a>
-                                                        <a href="./iniciarsesion.jsp"><i class="fa fa-sign-in"></i> Iniciar sesion</a>
+							<a href=""><i class="fa fa-sign-in"></i> Iniciar sesion</a>
 						</div>
 					</div>
 				</div>
@@ -84,6 +84,7 @@
 							<li><a href="./index.jsp">Inicio</a></li>
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
+							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>
@@ -96,33 +97,26 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-				<h1>Registrarse</h1>
+				<h1>Eliminar usuario</h1>
                     <div class="row">
-                        <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
+                        <div class="col-lg-12" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" action="./Persona" method="post">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                        	<label class="form-control-label" for="email">Correo electrónico</label>
-                                            <input class="form-control" type="email" placeholder="email" name="email" required>
-                                            <label class="form-control-label" for="pass">Contraseña</label>
-                                            <input class="form-control" type="password" placeholder="Contraseña" name="pass" required>
-                                        </div>
-                                    </div> 
-                                   <div class="col-lg-6">
-                                        <div class="form-group">
-                                        	<label class="form-control-label" for="idn">Numero de documento</label>
-                                            <input class="form-control" type="text" placeholder="Documento" name="idn" required>
-                                        	<label class="form-control-label" for="nam">Nombres</label>
-                                            <input class="form-control" type="text" placeholder="Nombres" name="name" required>
-                                            <label class="form-control-label" for="lnam">Apellidos</label>
-                                            <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
+                                <div class="row">
+                                    <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
+                                        <div class="form">
+                                            <form class="form-inline" action="./Persona" method="post">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="id">ID del usuario a eliminar:</label>
+                                                        <input class="form-control w-100" type="text" placeholder="ID" name="id" required>
+                                                    </div>
+                                                </div> 
+                                                <input type="hidden" name="operacion" value="eliminar" >
+                                                <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Eliminar</button>
+                                            </form>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="operacion" value="crear" >
-                                    <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse</button>
-                                    <button class="btn btn-danger w-100" style="margin-top: 4%;" required="false">Registrarse como otro tipo de cliente</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

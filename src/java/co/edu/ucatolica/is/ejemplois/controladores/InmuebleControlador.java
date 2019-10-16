@@ -5,23 +5,24 @@
  */
 package co.edu.ucatolica.is.ejemplois.controladores;
 
-import co.edu.ucatolica.is.ejemplois.DAOs.PersonaDAO;
-import co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO;
+import co.edu.ucatolica.is.ejemplois.DAOs.InmuebleDAO;
+import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 /**
  *
- * @author sala8
+ * @author sala1
  */
-public class PersonaControlador extends HttpServlet {
+@WebServlet(name="InmuebleControlador", urlPatterns={"/InmuebleControlador"})
+public class InmuebleControlador extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,48 +40,48 @@ public class PersonaControlador extends HttpServlet {
         
         String pag = "";
         String oper = request.getParameter("operacion");
-        PersonaDAO pdao = new PersonaDAO();
+        InmuebleDAO pdao = new InmuebleDAO();
         
         if (oper != null && oper.equals("crear"))
         {        
-            String correo = request.getParameter("email");
-            String contraseña = request.getParameter("pass");
-            String documento = request.getParameter("idn");
+            String id = request.getParameter("idn");
+            String lugar = request.getParameter("place");
+            String costo = request.getParameter("cost");
+            String rut = request.getParameter("rut");
             String nombre = request.getParameter("name");
-            String apellido = request.getParameter("lname");
 
-            PersonaDTO p = new PersonaDTO();
-            p.setEmail(correo);
-            p.setPass(contraseña);
-            p.setIdn(documento);
+            InmuebleDTO p = new InmuebleDTO();
+            p.setIdn(id);
+            p.setPlace(lugar);
+            p.setCost(costo);
+            p.setRut(rut);
             p.setName(nombre);
-            p.setLname(apellido);
             
-            boolean rta = pdao.crearPersona(p);
+            boolean rta = pdao.crearInmueble(p);
 
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
-            request.setAttribute("info", correo + " - " + contraseña + " - " + documento + " - " + nombre + " - " + " - " + apellido);
-            pag = "./persona_crear_rta.jsp";
+            request.setAttribute("info", id + " - " + lugar + " - " + costo + " - " + rut + " - "  + nombre);
+            pag = "./inmueble_crear_rta.jsp";
         }
         else if (oper != null && oper.equals("consultar"))
         {
-            ArrayList<PersonaDTO> lista = pdao.consultarPersonas();
+            ArrayList<InmuebleDTO> lista = pdao.consultarInmueble();
             
             System.out.println("lista: " + lista.size());
             
             //sesion.setAttribute("listap", lista);
             request.setAttribute("listap", lista);             
             
-            pag = "./persona_consultar.jsp";
+            pag = "./inmueble_consultar.jsp";
         }else if(oper!= null && oper.equals("eliminar"))
         {
             String id = request.getParameter("id");
-            PersonaDTO p = new PersonaDTO();
-            p.setPersona_id(Integer.parseInt(id));
-            pdao.eliminarPersona(p);
+            InmuebleDTO p = new InmuebleDTO();
+            p.setInmueble_id(Integer.parseInt(id));
+            pdao.eliminarInmueble(p);
             
-           pag ="./persona_eliminar.jsp";
+           pag ="./inmueble_eliminar.jsp";
         }
         
         
@@ -130,4 +131,3 @@ public class PersonaControlador extends HttpServlet {
     }// </editor-fold>
 
 }
-

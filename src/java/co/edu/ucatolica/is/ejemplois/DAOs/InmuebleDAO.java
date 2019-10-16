@@ -5,6 +5,7 @@
  */
 package co.edu.ucatolica.is.ejemplois.DAOs;
 
+import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
 import co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO;
 import co.edu.ucatolica.is.ejemplois.utils.ConexionBDs;
 import java.sql.Connection;
@@ -20,28 +21,28 @@ import java.util.logging.Logger;
  * @author NixonD
  * @fecha 20/09/2019
  */
-public class PersonaDAO {
+public class InmuebleDAO {
     
     /**
      * Este metodo crea un registro de Persona en la BDs.
      * @param p objeto de tipo PersonaDTO
      * @return boolean
      */
-    public boolean crearPersona(PersonaDTO p)
+    public boolean crearInmueble(InmuebleDTO p)
     {
         boolean rta = false;
         try {
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
-            String query = " insert into persona "
-                    + " (email, pass, idn, name, lname)"
+            String query = " insert into inmueble "
+                    + " (idn, place, cost, rut, name)"
                     + " values (?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString (1, p.getEmail());
-            preparedStmt.setString (2, p.getPass());
-            preparedStmt.setString (3, p.getIdn());
-            preparedStmt.setString (4, p.getName());
-            preparedStmt.setString (5, p.getLname());
+            preparedStmt.setString (1, p.getIdn());
+            preparedStmt.setString (2, p.getPlace());
+            preparedStmt.setString (3, p.getCost());
+            preparedStmt.setString (4, p.getRut());
+            preparedStmt.setString (5, p.getName());
 
             // execute the preparedstatement
             preparedStmt.execute();
@@ -49,7 +50,7 @@ public class PersonaDAO {
             
             rta = true;
         } catch (SQLException ex) {
-            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return rta;
@@ -59,24 +60,24 @@ public class PersonaDAO {
      * Metodo que consulta todas las pesonas de la BDs
      * @return ArrayList<PersonaDTO>
      */
-    public ArrayList<PersonaDTO> consultarPersonas()
+    public ArrayList<InmuebleDTO> consultarInmueble()
     {
-        ArrayList<PersonaDTO> lista = new ArrayList<PersonaDTO>();
+        ArrayList<InmuebleDTO> lista = new ArrayList<InmuebleDTO>();
         try {            
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();                        
-            String query = "SELECT * FROM persona";
+            String query = "SELECT * FROM inmueble";
             PreparedStatement preparedStmt = conn.prepareStatement(query);
             ResultSet rs = preparedStmt.executeQuery();
             
             while(rs.next())
             {
-                PersonaDTO p = new PersonaDTO();
+                InmuebleDTO p = new InmuebleDTO();
                 
-                p.setEmail(rs.getString("email"));
-                p.setPass(rs.getString("pass"));
                 p.setIdn(rs.getString("idn"));
+                p.setPlace(rs.getString("place"));
+                p.setCost(rs.getString("cost"));
+                p.setRut(rs.getString("rut"));
                 p.setName(rs.getString("name"));
-                p.setLname(rs.getString("lname"));
 
                 
                 lista.add(p);
@@ -85,23 +86,25 @@ public class PersonaDAO {
             conn.close();            
             
         } catch (SQLException ex) {
-            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return lista;
     }
-    public void eliminarPersona(PersonaDTO per){
+    public void eliminarInmueble(InmuebleDTO per){
         try{
              Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
-             String query = "DELETE FROM persona where id_persona = ? ";
+             String query = "DELETE FROM inmueble where id_inmueble = ? ";
              PreparedStatement preparedStmt = conn.prepareStatement (query);
-             preparedStmt.setInt(1,per.getPersona_id());
+             preparedStmt.setInt(1,per.getInmueble_id());
              preparedStmt.executeUpdate();
                 
              
         }catch(SQLException e){
-            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     
 }
+
+
