@@ -6,7 +6,6 @@
 package co.edu.ucatolica.is.ejemplois.DAOs;
 
 import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
-import co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO;
 import co.edu.ucatolica.is.ejemplois.utils.ConexionBDs;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,15 +16,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Esta clase es responsable de las operaciones con Persona
- * @author NixonD
+ * Esta clase es responsable de las operaciones con inmueble
+ * @author 
  * @fecha 20/09/2019
  */
 public class InmuebleDAO {
     
     /**
-     * Este metodo crea un registro de Persona en la BDs.
-     * @param p objeto de tipo PersonaDTO
+     * Este metodo crea un registro de inmueble en la BDs.
+     * @param p objeto de tipo InmuebleDTO
      * @return boolean
      */
     public boolean crearInmueble(InmuebleDTO p)
@@ -34,20 +33,20 @@ public class InmuebleDAO {
         try {
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
             String query = " insert into inmueble "
-                    + " (idn, place, cost, rut, name)"
+                    + " (typ, add, cost, place, city)"
                     + " values (?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString (1, p.getIdn());
-            preparedStmt.setString (2, p.getPlace());
+            preparedStmt.setString (1, p.getTyp());
+            preparedStmt.setString (2, p.getAdd());
             preparedStmt.setString (3, p.getCost());
-            preparedStmt.setString (4, p.getRut());
-            preparedStmt.setString (5, p.getName());
+            preparedStmt.setString (4, p.getPlace());
+            preparedStmt.setString (5, p.getCity());
 
             // execute the preparedstatement
             preparedStmt.execute();
             conn.close();                        
-            
+
             rta = true;
         } catch (SQLException ex) {
             Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -73,11 +72,10 @@ public class InmuebleDAO {
             {
                 InmuebleDTO p = new InmuebleDTO();
                 
-                p.setIdn(rs.getString("idn"));
-                p.setPlace(rs.getString("place"));
+                p.setTyp(rs.getString("typ"));
+                p.setAdd(rs.getString("add"));
                 p.setCost(rs.getString("cost"));
-                p.setRut(rs.getString("rut"));
-                p.setName(rs.getString("name"));
+                p.setPlace(rs.getString("place"));
 
                 
                 lista.add(p);

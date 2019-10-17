@@ -65,8 +65,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<a href=""><i class="fa fa-user-circle-o"></i> Registrarse</a>
-                                                        <a href="./iniciarsesion.jsp"><i class="fa fa-sign-in"></i> Iniciar sesion</a>
+							<a href=""><i class="fa fa-user-circle-o"></i> Bienvenido</a>
 						</div>
 					</div>
 				</div>
@@ -96,7 +95,8 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-				<h1>Registrarse</h1>
+				<h1>Modificar usuario</h1>
+                                <p>Para modificar debes ingresar los datos nuevos junto con el numero de documento</p>
                     <div class="row">
                         <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
@@ -119,8 +119,7 @@
                                             <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
                                         </div>
                                     </div>
-                                    <button type="submit"  name="operacion" value="crearAdmin" class="btn btn-primary w-100" style="margin-top: 4%;">Registrarse como administrador</button>
-                                    <button type="submit"  name="operacion" value="crearUser" class="btn btn-danger w-100" style="margin-top: 4%;">Registrarse como usuario</button>
+                                    <button type="submit"  name="operacion" value="modificar" class="btn btn-primary w-100" style="margin-top: 4%;">Modificar</button>
                                 </form>
                             </div>
                         </div>

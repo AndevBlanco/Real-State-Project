@@ -11,34 +11,42 @@ package co.edu.ucatolica.is.ejemplois.DTOs;
  */
 public class InmuebleDTO {
     private int inmueble_id=0;
-    private String idn="";
-    private String place="";
+    private String typ="";
+    private String add="";
     private String cost="";
-    private String rut="";
-    private String name="";
+    private String place="";
+    private String city="";
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public int getInmueble_id() {
         return inmueble_id;
     }
 
-    public void setInmueble_id(int persona_id) {
+    public void setInmueble_id(int inmueble_id) {
         this.inmueble_id = inmueble_id;
     }
 
-    public String getIdn() {
-        return idn;
+    public String getTyp() {
+        return typ;
     }
 
-    public void setIdn(String idn) {
-        this.idn = idn;
+    public void setTyp(String typ) {
+        this.typ = typ;
     }
 
-    public String getPlace() {
-        return place;
+    public String getAdd() {
+        return add;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setAdd(String add) {
+        this.add = add;
     }
 
     public String getCost() {
@@ -49,19 +57,12 @@ public class InmuebleDTO {
         this.cost = cost;
     }
 
-    public String getRut() {
-        return rut;
+    public String getPlace() {
+        return place;
     }
 
-    public void setRut(String rut) {
-        this.rut = rut;
+    public void setPlace(String place) {
+        this.place = place;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    
 }

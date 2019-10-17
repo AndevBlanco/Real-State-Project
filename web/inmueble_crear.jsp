@@ -1,10 +1,3 @@
-<%-- 
-    Document   : InAlpes
-    Created on : 13/09/2019, 04:43:10 PM
-    Author     : sala8
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,8 +58,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-                                                    <a href="./persona_crear.jsp"><i class="fa fa-user-circle-o"></i> Registrarse</a>
-							<a href=""><i class="fa fa-sign-in"></i> Iniciar sesion</a>
+                                                    <a href="./persona_crear_rta.jsp"><i class="fa fa-user-circle-o"></i> Bienvenido</a>
 						</div>
 					</div>
 				</div>
@@ -82,9 +74,9 @@
 						</div>
 						<ul class="main-menu">
 							<li><a href="./index.jsp">Inicio</a></li>
-							<li><a href="./about.jsp">Acerca de</a></li>
-							<li><a href="./contact.jsp">Contactenos</a></li>
-							<li><a href="./consultar.jsp">Consultar usuario</a></li>
+							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
+							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
+							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>
@@ -97,22 +89,30 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-                    <h1>Iniciar sesiÃ³n</h1>
+                    <h1>Registrar inmueble</h1>
                     <div class="row">
                         <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" action="./Persona" method="post">
+                                <form class="form-inline" action="./inmueble" method="post">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="email">Correo electrÃ³nico</label>
-                                            <input class="form-control w-100" type="email" placeholder="email" name="email" required>
+                                            <label class="form-control-label" for="typ">Tipo de inmueble</label>
+                                            <input class="form-control" type="text" placeholder="Venta o arriendo" name="typ" required pattern="venta|arriendo"/>
+                                            <label class="form-control-label" for="add">Dirección</label>
+                                            <input class="form-control" type="text" placeholder="Direccion" name="add" required/>
+                                            <label class="form-control-label" for="cost">Precio</label>
+                                            <input class="form-control" type="text" placeholder="costo" name="cost" required/>
+                                            <label class="form-control-label" for="city">Ciudad</label>
+                                            <input class="form-control" type="text" placeholder="city" name="city" required pattern="Medellín|Bogotá|Cali"/>
                                         </div>
                                     </div> 
-                                    <div class="col-lg-6">
-                                        <label class="form-control-label" for="pass">ContraseÃ±a</label>
-                                        <input class="form-control w-100" type="password" placeholder="ContraseÃ±a" name="pass" required>
+                                   <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="place">Descripción del sitio</label>
+                                            <textarea class="form-control" rows="8" placeholder="Descripción" name="place" required></textarea>
+                                        </div>
                                     </div>
-                                    <button type="submit" name="operacion" value="iniciar" class="btn btn-primary w-100" style="margin-top: 4%;">Iniciar sesiÃ³n</button>
+                                    <button type="submit" name="operacion" value="crear" class="btn btn-primary w-100" style="margin-top: 4%;">Registrar inmueble</button>
                                 </form>
                             </div>
                         </div>
@@ -120,7 +120,8 @@
 		</div>
 	</section>
 	<!-- Hero section end -->
-	
+
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="./resources/js/jquery-3.2.1.min.js"></script>
@@ -129,5 +130,7 @@
 	<script src="./resources/js/masonry.pkgd.min.js"></script>
 	<script src="./resources/js/magnific-popup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+
 </body>
 </html>
+

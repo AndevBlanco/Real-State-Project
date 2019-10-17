@@ -4,9 +4,17 @@
         <servlet-name>Persona</servlet-name>
         <servlet-class>co.edu.ucatolica.is.ejemplois.controladores.PersonaControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>inmueble</servlet-name>
+        <servlet-class>co.edu.ucatolica.is.ejemplois.controladores.inmueble</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Persona</servlet-name>
         <url-pattern>/Persona</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inmueble</servlet-name>
+        <url-pattern>/inmueble</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

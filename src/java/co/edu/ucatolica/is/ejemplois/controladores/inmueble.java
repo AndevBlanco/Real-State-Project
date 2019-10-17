@@ -8,19 +8,19 @@ package co.edu.ucatolica.is.ejemplois.controladores;
 import co.edu.ucatolica.is.ejemplois.DAOs.InmuebleDAO;
 import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 /**
  *
  * @author sala1
  */
-@WebServlet(name="InmuebleControlador", urlPatterns={"/InmuebleControlador"})
-public class InmuebleControlador extends HttpServlet {
+public class inmueble extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,33 +33,31 @@ public class InmuebleControlador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //HttpSession sesion = request.getSession();
+         //HttpSession sesion = request.getSession();
         response.setContentType("text/html;charset=UTF-8");
         
         String pag = "";
         String oper = request.getParameter("operacion");
         InmuebleDAO pdao = new InmuebleDAO();
         
-        if (oper != null && oper.equals("crear"))
-        {        
-            String id = request.getParameter("idn");
-            String lugar = request.getParameter("place");
+        if (oper != null && oper.equals("crear")){        
+            String tipo = request.getParameter("typ");
+            String direccion = request.getParameter("add");
             String costo = request.getParameter("cost");
-            String rut = request.getParameter("rut");
-            String nombre = request.getParameter("name");
+            String lugar = request.getParameter("place");
+            String ciu = request.getParameter("city");
 
             InmuebleDTO p = new InmuebleDTO();
-            p.setIdn(id);
-            p.setPlace(lugar);
+            p.setTyp(tipo);
+            p.setAdd(direccion);
             p.setCost(costo);
-            p.setRut(rut);
-            p.setName(nombre);
-            
+            p.setPlace(lugar);
+            p.setCity(ciu);
             boolean rta = pdao.crearInmueble(p);
 
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
-            request.setAttribute("info", id + " - " + lugar + " - " + costo + " - " + rut + " - "  + nombre);
+            request.setAttribute("info", tipo + " - " + direccion + " - " + costo + " - " + lugar );
             pag = "./inmueble_crear_rta.jsp";
         }
         else if (oper != null && oper.equals("consultar"))
@@ -85,8 +83,6 @@ public class InmuebleControlador extends HttpServlet {
         
         RequestDispatcher rd = request.getRequestDispatcher(pag);
         rd.forward(request, response);
-        
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

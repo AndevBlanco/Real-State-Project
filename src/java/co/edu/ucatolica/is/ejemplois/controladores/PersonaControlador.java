@@ -97,12 +97,42 @@ public class PersonaControlador extends HttpServlet {
             pag = "./persona_consultar.jsp";
         }else if(oper!= null && oper.equals("eliminar"))
         {
-            String id = request.getParameter("id");
+            String id = request.getParameter("idn");
             PersonaDTO p = new PersonaDTO();
-            p.setPersona_id(Integer.parseInt(id));
+            p.setIdn(id);
             pdao.eliminarPersona(p);
             
            pag ="./persona_eliminar.jsp";
+        }else if(oper!= null && oper.equals("modificar")){
+            String correo = request.getParameter("email");
+            String contraseña = request.getParameter("pass");
+            String documento = request.getParameter("idn");
+            String nombre = request.getParameter("name");
+            String apellido = request.getParameter("lname");
+
+            PersonaDTO p = new PersonaDTO();
+            p.setEmail(correo);
+            p.setPass(contraseña);
+            p.setIdn(documento);
+            p.setName(nombre);
+            p.setLname(apellido);
+            
+            pdao.modificarPersona(p);
+            pag = "./persona_crear_rta.jsp";
+        }else if(oper!= null && oper.equals("iniciar")){
+            String correo = request.getParameter("email");
+            String contraseña = request.getParameter("pass");
+
+            PersonaDTO p = new PersonaDTO();
+            p.setEmail(correo);
+            p.setPass(contraseña);
+            
+            boolean h=pdao.iniciarPersona(p);
+            if(h==true){
+                pag = "./persona_crear_rta.jsp";
+            }else{
+                pag = "./index.jsp";
+            }
         }
         
         

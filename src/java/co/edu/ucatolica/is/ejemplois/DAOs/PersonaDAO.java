@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.Alert;
 
 /**
  * Esta clase es responsable de las operaciones con Persona
@@ -90,18 +91,61 @@ public class PersonaDAO {
         
         return lista;
     }
+    public void modificarPersona(PersonaDTO p){
+        try {
+            Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
+            String query = "update persona set email = ?, pass = ?, name=?, lname=? where idn=?";
+            
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString (1, p.getEmail());
+            preparedStmt.setString (2, p.getPass());
+            preparedStmt.setString (3, p.getName());
+            preparedStmt.setString (4, p.getLname());
+            preparedStmt.setString (5, p.getIdn());
+
+            // execute the preparedstatement
+            preparedStmt.execute();
+            conn.close();                        
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
     public void eliminarPersona(PersonaDTO per){
         try{
              Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
-             String query = "DELETE FROM persona where id_persona = ? ";
+             String query = "DELETE FROM persona where idn = ? ";
              PreparedStatement preparedStmt = conn.prepareStatement (query);
-             preparedStmt.setInt(1,per.getPersona_id());
+             preparedStmt.setString(1,per.getIdn());
              preparedStmt.executeUpdate();
-                
              
         }catch(SQLException e){
             Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, e);
         }
+    }
+    public boolean iniciarPersona(PersonaDTO p){
+        boolean rta = false;
+        int i=0;
+        try {
+            Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
+            String query = " select * from persona where email=? and pass=?";
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString (1, p.getEmail());
+            preparedStmt.setString (2, p.getPass());
+            ResultSet rs = preparedStmt.executeQuery();
+            while(rs.next()){
+                i++;
+                if(i>0){
+                    rta=true;
+                }
+            }
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return rta;
     }
     
 }

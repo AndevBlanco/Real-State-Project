@@ -65,8 +65,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<a href=""><i class="fa fa-user-circle-o"></i> Registrarse</a>
-							<a href=""><i class="fa fa-sign-in"></i> Iniciar sesion</a>
+							<a href="./persona_crear_rta.jsp"><i class="fa fa-user-circle-o"></i> Bienvenido</a>
 						</div>
 					</div>
 				</div>
@@ -84,7 +83,6 @@
 							<li><a href="./index.jsp">Inicio</a></li>
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
-							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
 						</ul>
 					</div>
 				</div>
@@ -107,8 +105,8 @@
                                             <form class="form-inline" action="./Persona" method="post">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label class="form-control-label" for="id">ID del usuario a eliminar:</label>
-                                                        <input class="form-control w-100" type="text" placeholder="ID" name="id" required>
+                                                        <label class="form-control-label" for="idn">ID del usuario a eliminar:</label>
+                                                        <input class="form-control w-100" type="text" placeholder="ID" name="idn" required pattern="[0-9]*">
                                                     </div>
                                                 </div> 
                                                 <input type="hidden" name="operacion" value="eliminar" >
