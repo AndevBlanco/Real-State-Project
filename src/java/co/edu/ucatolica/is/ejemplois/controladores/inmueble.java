@@ -7,6 +7,7 @@ package co.edu.ucatolica.is.ejemplois.controladores;
 
 import co.edu.ucatolica.is.ejemplois.DAOs.InmuebleDAO;
 import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
+import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
@@ -58,7 +59,39 @@ public class inmueble extends HttpServlet {
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
             request.setAttribute("info", tipo + " - " + direccion + " - " + costo + " - " + lugar + "-" + ciu );
-            pag = "./inmueble_crear_rta.jsp";
+            pag = "./persona_crear_rta.jsp";
+        }else if (oper != null && oper.equals("consultar")){
+            ArrayList<InmuebleDTO> lista = pdao.consultarInmueble();
+            
+            System.out.println("lista: " + lista.size());
+            
+            //sesion.setAttribute("listap", lista);
+            request.setAttribute("listap", lista);             
+            
+            pag = "./inmueble_consultar.jsp";
+        }else if(oper!= null && oper.equals("eliminar")){
+            String id = request.getParameter("direc");
+            InmuebleDTO p = new InmuebleDTO();
+            p.setDirec(id);
+            pdao.eliminarInmueble(p);
+            
+           pag ="./inmueble_eliminar.jsp";
+        }else if(oper!= null && oper.equals("modificar")){
+            String tipo = request.getParameter("tipoi");
+            String direccion = request.getParameter("direc");
+            String costo = request.getParameter("coste");
+            String lugares = request.getParameter("places");
+            String ciudad = request.getParameter("city");
+
+            InmuebleDTO p = new InmuebleDTO();
+            p.setTipoi(tipo);
+            p.setDirec(direccion);
+            p.setCoste(costo);
+            p.setPlaces(lugares);
+            p.setCity(ciudad);
+            
+            pdao.modificarInmueble(p);
+            pag = "./inmueble_modificar.jsp";
         }
         
         

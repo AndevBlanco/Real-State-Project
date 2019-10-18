@@ -65,7 +65,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<a href=""><i class="fa fa-user-circle-o"></i> Bienvenido</a>
+							<a href="./persona_crear_rta.jsp"><i class="fa fa-user-circle-o"></i> Bienvenido</a>
 						</div>
 					</div>
 				</div>
@@ -90,32 +90,26 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-				<h1>Modificar usuario</h1>
-                                <p>Para modificar debes ingresar los datos nuevos junto con el numero de documento</p>
+				<h1>Eliminar inmueble</h1>
                     <div class="row">
-                        <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
+                        <div class="col-lg-12" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" action="./Persona" method="post">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="email">Correo electrónico</label>
-                                            <input class="form-control" type="email" placeholder="email" name="email" required>
-                                            <label class="form-control-label" for="pass">Contraseña</label>
-                                            <input class="form-control" type="password" placeholder="Contraseña" name="pass" required>
-                                        </div>
-                                    </div> 
-                                   <div class="col-lg-6">
-                                        <div class="form-group">
-                                        	<label class="form-control-label" for="idn">Numero de documento</label>
-                                            <input class="form-control" type="text" placeholder="Documento" name="idn" required pattern="[0-9]*">
-                                        	<label class="form-control-label" for="nam">Nombres</label>
-                                            <input class="form-control" type="text" placeholder="Nombres" name="name" required>
-                                            <label class="form-control-label" for="lnam">Apellidos</label>
-                                            <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
+                                <div class="row">
+                                    <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
+                                        <div class="form">
+                                            <form class="form-inline" action="./inmueble" method="post">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="direc">Direccion del inmueble a eliminar:</label>
+                                                        <input class="form-control w-100" type="text" placeholder="Direccion" name="direc" required>
+                                                    </div>
+                                                </div> 
+                                                <input type="hidden" name="operacion" value="eliminar" >
+                                                <button type="submit" name="Enviar" class="btn btn-primary w-100" style="margin-top: 4%;">Eliminar</button>
+                                            </form>
                                         </div>
                                     </div>
-                                    <button type="submit"  name="operacion" value="modificar" class="btn btn-primary w-100" style="margin-top: 4%;">Modificar</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -131,7 +131,7 @@ public class PersonaControlador extends HttpServlet {
             if(h==true){
                 pag = "./persona_crear_rta.jsp";
             }else{
-                pag = "./index.jsp";
+                pag = "./error.jsp";
             }
         }
         

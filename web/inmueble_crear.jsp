@@ -72,12 +72,6 @@
 						<div class="nav-switch">
 							<i class="fa fa-bars"></i>
 						</div>
-						<ul class="main-menu">
-							<li><a href="./index.jsp">Inicio</a></li>
-							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
-							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
-							<li><a href="./persona_consultar.jsp">Consultar usuario</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -100,19 +94,19 @@
                                             <input class="form-control" type="text" placeholder="Venta o arriendo" name="tipoi" required pattern="venta|arriendo"/>
                                             <label class="form-control-label" for="direc">Dirección</label>
                                             <input class="form-control" type="text" placeholder="Direccion" name="direc" required/>
-                                            <label class="form-control-label" for="coste">Precio</label>
-                                            <input class="form-control" type="text" placeholder="costo" name="coste" required/>
                                             <label class="form-control-label" for="city">Ciudad</label>
                                             <input class="form-control" type="text" placeholder="city" name="city" required pattern="Medellín|Bogotá|Cali"/>
                                         </div>
                                     </div> 
                                    <div class="col-lg-6">
                                         <div class="form-group">
+                                            <label class="form-control-label" for="coste">Precio</label>
+                                            <input class="form-control" type="text" placeholder="costo" name="coste" required pattern="[0-9]*"/>
                                             <label class="form-control-label" for="places">Descripción del sitio</label>
-                                            <input class="form-control" type="text" placeholder="Descripción" name="places" required>
+                                            <textarea class="form-control" type="text" placeholder="Descripción" rows="5" name="places" required></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" name="operacion" value="crear" class="btn btn-primary w-100" style="margin-top: 4%;">Registrar inmueble</button>
+                                    <button type="submit" name="operacion" value="crear" class="btn btn-primary w-100" style="margin-top: 4%;">Modificar inmueble</button>
                                 </form>
                             </div>
                         </div>

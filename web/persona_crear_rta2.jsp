@@ -83,7 +83,6 @@
                                                     <li><a href="./persona_crear_rta2.jsp">Inicio</a></li>
 							<li><a href="./resources/jsp/about.jsp">Acerca de</a></li>
 							<li><a href="./resources/jsp/contact.jsp">Contactenos</a></li>
-                                                        <li><a href="./inmueble_crear.jsp">Crear inmueble</a></li>
 						</ul>
 					</div>
 				</div>

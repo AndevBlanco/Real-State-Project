@@ -1,10 +1,3 @@
-<%-- 
-    Document   : InAlpes
-    Created on : 13/09/2019, 04:43:10 PM
-    Author     : sala8
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +58,7 @@
 							<a href=""><i class="fa fa-linkedin"></i></a>
 						</div>
 						<div class="user-panel">
-							<a href=""><i class="fa fa-user-circle-o"></i> Bienvenido</a>
+                                                    <a href="./persona_crear_rta.jsp"><i class="fa fa-user-circle-o"></i> Bienvenido</a>
 						</div>
 					</div>
 				</div>
@@ -90,31 +83,30 @@
 	<!-- Hero section -->
 	<section class="hero-section set-bg" data-setbg="./resources/img/bg.jpg">
 		<div class="container hero-text text-white">
-				<h1>Modificar usuario</h1>
-                                <p>Para modificar debes ingresar los datos nuevos junto con el numero de documento</p>
+                    <h1>Modificar inmueble</h1>
                     <div class="row">
                         <div class="col-lg-6" style="margin: auto; margin-top: 1%;">
                             <div class="form">
-                                <form class="form-inline" action="./Persona" method="post">
+                                <form class="form-inline" action="./inmueble" method="post">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="email">Correo electrÃ³nico</label>
-                                            <input class="form-control" type="email" placeholder="email" name="email" required>
-                                            <label class="form-control-label" for="pass">ContraseÃ±a</label>
-                                            <input class="form-control" type="password" placeholder="ContraseÃ±a" name="pass" required>
+                                            <label class="form-control-label" for="tipoi">Tipo de inmueble</label>
+                                            <input class="form-control" type="text" placeholder="Venta o arriendo" name="tipoi" required pattern="venta|arriendo"/>
+                                            <label class="form-control-label" for="direc">Dirección</label>
+                                            <input class="form-control" type="text" placeholder="Direccion" name="direc" required/>
+                                            <label class="form-control-label" for="city">Ciudad</label>
+                                            <input class="form-control" type="text" placeholder="city" name="city" required pattern="Medellín|Bogotá|Cali"/>
                                         </div>
                                     </div> 
                                    <div class="col-lg-6">
                                         <div class="form-group">
-                                        	<label class="form-control-label" for="idn">Numero de documento</label>
-                                            <input class="form-control" type="text" placeholder="Documento" name="idn" required pattern="[0-9]*">
-                                        	<label class="form-control-label" for="nam">Nombres</label>
-                                            <input class="form-control" type="text" placeholder="Nombres" name="name" required>
-                                            <label class="form-control-label" for="lnam">Apellidos</label>
-                                            <input class="form-control" type="text" placeholder="Apellidos" name="lname" required>
+                                            <label class="form-control-label" for="coste">Precio</label>
+                                            <input class="form-control" type="text" placeholder="costo" name="coste" required pattern="[0-9]*"/>
+                                            <label class="form-control-label" for="places">Descripción del sitio</label>
+                                            <textarea class="form-control" type="text" placeholder="Descripción" rows="5" name="places" required></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit"  name="operacion" value="modificar" class="btn btn-primary w-100" style="margin-top: 4%;">Modificar</button>
+                                    <button type="submit" name="operacion" value="modificar" class="btn btn-primary w-100" style="margin-top: 4%;">Modificar inmueble</button>
                                 </form>
                             </div>
                         </div>
@@ -122,7 +114,8 @@
 		</div>
 	</section>
 	<!-- Hero section end -->
-	
+
+
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="./resources/js/jquery-3.2.1.min.js"></script>
@@ -131,5 +124,7 @@
 	<script src="./resources/js/masonry.pkgd.min.js"></script>
 	<script src="./resources/js/magnific-popup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+
 </body>
 </html>
+

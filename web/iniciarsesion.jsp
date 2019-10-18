@@ -80,12 +80,6 @@
 						<div class="nav-switch">
 							<i class="fa fa-bars"></i>
 						</div>
-						<ul class="main-menu">
-							<li><a href="./index.jsp">Inicio</a></li>
-							<li><a href="./about.jsp">Acerca de</a></li>
-							<li><a href="./contact.jsp">Contactenos</a></li>
-							<li><a href="./consultar.jsp">Consultar usuario</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
