@@ -11,19 +11,11 @@ package co.edu.ucatolica.is.ejemplois.DTOs;
  */
 public class InmuebleDTO {
     private int inmueble_id=0;
-    private String typ="";
-    private String add="";
-    private String cost="";
-    private String place="";
+    private String tipoi="";
+    private String direc="";
+    private String coste="";
+    private String places="";
     private String city="";
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
 
     public int getInmueble_id() {
         return inmueble_id;
@@ -33,36 +25,44 @@ public class InmuebleDTO {
         this.inmueble_id = inmueble_id;
     }
 
-    public String getTyp() {
-        return typ;
+    public String getTipoi() {
+        return tipoi;
     }
 
-    public void setTyp(String typ) {
-        this.typ = typ;
+    public void setTipoi(String tipoi) {
+        this.tipoi = tipoi;
     }
 
-    public String getAdd() {
-        return add;
+    public String getDirec() {
+        return direc;
     }
 
-    public void setAdd(String add) {
-        this.add = add;
+    public void setDirec(String direc) {
+        this.direc = direc;
     }
 
-    public String getCost() {
-        return cost;
+    public String getCoste() {
+        return coste;
     }
 
-    public void setCost(String cost) {
-        this.cost = cost;
+    public void setCoste(String coste) {
+        this.coste = coste;
     }
 
-    public String getPlace() {
-        return place;
+    public String getPlaces() {
+        return places;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setPlaces(String places) {
+        this.places = places;
     }
-    
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
 }

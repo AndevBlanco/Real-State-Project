@@ -8,13 +8,13 @@ package co.edu.ucatolica.is.ejemplois.controladores;
 import co.edu.ucatolica.is.ejemplois.DAOs.InmuebleDAO;
 import co.edu.ucatolica.is.ejemplois.DTOs.InmuebleDTO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -41,43 +41,24 @@ public class inmueble extends HttpServlet {
         InmuebleDAO pdao = new InmuebleDAO();
         
         if (oper != null && oper.equals("crear")){        
-            String tipo = request.getParameter("typ");
-            String direccion = request.getParameter("add");
-            String costo = request.getParameter("cost");
-            String lugar = request.getParameter("place");
+            String tipo = request.getParameter("tipoi");
+            String direccion = request.getParameter("direc");
+            String costo = request.getParameter("coste");
+            String lugar = request.getParameter("places");
             String ciu = request.getParameter("city");
 
             InmuebleDTO p = new InmuebleDTO();
-            p.setTyp(tipo);
-            p.setAdd(direccion);
-            p.setCost(costo);
-            p.setPlace(lugar);
+            p.setTipoi(tipo);
+            p.setDirec(direccion);
+            p.setCoste(costo);
+            p.setPlaces(lugar);
             p.setCity(ciu);
             boolean rta = pdao.crearInmueble(p);
 
             //sesion.setAttribute("info", nom + " - " + ape + " - " + rta);
             
-            request.setAttribute("info", tipo + " - " + direccion + " - " + costo + " - " + lugar );
+            request.setAttribute("info", tipo + " - " + direccion + " - " + costo + " - " + lugar + "-" + ciu );
             pag = "./inmueble_crear_rta.jsp";
-        }
-        else if (oper != null && oper.equals("consultar"))
-        {
-            ArrayList<InmuebleDTO> lista = pdao.consultarInmueble();
-            
-            System.out.println("lista: " + lista.size());
-            
-            //sesion.setAttribute("listap", lista);
-            request.setAttribute("listap", lista);             
-            
-            pag = "./inmueble_consultar.jsp";
-        }else if(oper!= null && oper.equals("eliminar"))
-        {
-            String id = request.getParameter("id");
-            InmuebleDTO p = new InmuebleDTO();
-            p.setInmueble_id(Integer.parseInt(id));
-            pdao.eliminarInmueble(p);
-            
-           pag ="./inmueble_eliminar.jsp";
         }
         
         

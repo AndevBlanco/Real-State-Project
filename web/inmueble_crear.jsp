@@ -96,20 +96,20 @@
                                 <form class="form-inline" action="./inmueble" method="post">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="typ">Tipo de inmueble</label>
-                                            <input class="form-control" type="text" placeholder="Venta o arriendo" name="typ" required pattern="venta|arriendo"/>
-                                            <label class="form-control-label" for="add">Dirección</label>
-                                            <input class="form-control" type="text" placeholder="Direccion" name="add" required/>
-                                            <label class="form-control-label" for="cost">Precio</label>
-                                            <input class="form-control" type="text" placeholder="costo" name="cost" required/>
+                                            <label class="form-control-label" for="tipoi">Tipo de inmueble</label>
+                                            <input class="form-control" type="text" placeholder="Venta o arriendo" name="tipoi" required pattern="venta|arriendo"/>
+                                            <label class="form-control-label" for="direc">Dirección</label>
+                                            <input class="form-control" type="text" placeholder="Direccion" name="direc" required/>
+                                            <label class="form-control-label" for="coste">Precio</label>
+                                            <input class="form-control" type="text" placeholder="costo" name="coste" required/>
                                             <label class="form-control-label" for="city">Ciudad</label>
                                             <input class="form-control" type="text" placeholder="city" name="city" required pattern="Medellín|Bogotá|Cali"/>
                                         </div>
                                     </div> 
                                    <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="place">Descripción del sitio</label>
-                                            <textarea class="form-control" rows="8" placeholder="Descripción" name="place" required></textarea>
+                                            <label class="form-control-label" for="places">Descripción del sitio</label>
+                                            <input class="form-control" type="text" placeholder="Descripción" name="places" required>
                                         </div>
                                     </div>
                                     <button type="submit" name="operacion" value="crear" class="btn btn-primary w-100" style="margin-top: 4%;">Registrar inmueble</button>

@@ -27,20 +27,19 @@ public class InmuebleDAO {
      * @param p objeto de tipo InmuebleDTO
      * @return boolean
      */
-    public boolean crearInmueble(InmuebleDTO p)
-    {
+    public boolean crearInmueble(InmuebleDTO p){
         boolean rta = false;
         try {
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
             String query = " insert into inmueble "
-                    + " (typ, add, cost, place, city)"
+                    + " (tipoi, direc, coste, places, city)"
                     + " values (?, ?, ?, ?, ?)";
             
             PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString (1, p.getTyp());
-            preparedStmt.setString (2, p.getAdd());
-            preparedStmt.setString (3, p.getCost());
-            preparedStmt.setString (4, p.getPlace());
+            preparedStmt.setString (1, p.getTipoi());
+            preparedStmt.setString (2, p.getDirec());
+            preparedStmt.setString (3, p.getCoste());
+            preparedStmt.setString (4, p.getPlaces());
             preparedStmt.setString (5, p.getCity());
 
             // execute the preparedstatement
@@ -59,49 +58,6 @@ public class InmuebleDAO {
      * Metodo que consulta todas las pesonas de la BDs
      * @return ArrayList<PersonaDTO>
      */
-    public ArrayList<InmuebleDTO> consultarInmueble()
-    {
-        ArrayList<InmuebleDTO> lista = new ArrayList<InmuebleDTO>();
-        try {            
-            Connection conn = ConexionBDs.getMysqlDataSource().getConnection();                        
-            String query = "SELECT * FROM inmueble";
-            PreparedStatement preparedStmt = conn.prepareStatement(query);
-            ResultSet rs = preparedStmt.executeQuery();
-            
-            while(rs.next())
-            {
-                InmuebleDTO p = new InmuebleDTO();
-                
-                p.setTyp(rs.getString("typ"));
-                p.setAdd(rs.getString("add"));
-                p.setCost(rs.getString("cost"));
-                p.setPlace(rs.getString("place"));
-
-                
-                lista.add(p);
-            }
-            
-            conn.close();            
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        return lista;
-    }
-    public void eliminarInmueble(InmuebleDTO per){
-        try{
-             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();
-             String query = "DELETE FROM inmueble where id_inmueble = ? ";
-             PreparedStatement preparedStmt = conn.prepareStatement (query);
-             preparedStmt.setInt(1,per.getInmueble_id());
-             preparedStmt.executeUpdate();
-                
-             
-        }catch(SQLException e){
-            Logger.getLogger(InmuebleDAO.class.getName()).log(Level.SEVERE, null, e);
-        }
-    }
     
 }
 
