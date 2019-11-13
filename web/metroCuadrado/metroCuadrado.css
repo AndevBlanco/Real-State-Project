@@ -1,0 +1,21 @@
+img.logo{
+    width: 50%;
+    height: 100%;
+}
+nav li a{
+   font-weight: bold;
+}
+#containimg{
+    height: 44%;
+    widht:100%;
+    background-image: url("./img/desktop.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#titu{
+    color:white;
+}
+#formu{
+    margin: auto;
+}
