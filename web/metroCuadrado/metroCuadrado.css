@@ -19,3 +19,9 @@ nav li a{
 #formu{
     margin: auto;
 }
+#buy, #tip, #tipot{
+    margin-right: 1%;
+}
+#car.card{
+    margin-right: 1%;
+}

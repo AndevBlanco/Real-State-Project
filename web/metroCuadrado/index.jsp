@@ -45,18 +45,18 @@
         </div>
     </nav>   
     <div class="container-fluid" id="containimg">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-lg-12">
                 <h2 id="titu">ENCUENTRA INMUEBLES EN VENTA Y ARRIENDO:</h2>
                 <form class="form col-lg-12" id="formu">
-                    <div class="form-group row">
-                        <select class="form-control col-lg-3" id="sel1">
+                    <div class="form-group form-inline">
+                        <select class="form-control col-lg-3" id="buy">
                             <option>Compra Nuevo</option>
                             <option>Compra Usado</option>
                             <option>Compra Nuevo y Usado</option>
                             <option>Arriendo</option>
                         </select>
-                        <select class="form-control col-lg-3" id="sel1">
+                        <select class="form-control col-lg-3" id="tip">
                             <option>Apartamentos</option>
                             <option>Oficinas</option>
                             <option>Bodegas</option>
@@ -72,19 +72,33 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
+    <div class="container-fluid" id="car">
+            <div class="col-lg-6">
+                <div class="form-group form-inline">
+                    <h4>INMUEBLES DESTACADOS</h4>
+                    <form class="form form-inline">
+                        <div class="card border-primary" id="" style="width: 18rem;">
+                            <img src="./img/logo_metrocuadrado@2x.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card border-primary" style="width: 18rem;">
+                            <img src="./img/logo_metrocuadrado@2x.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+            <div class="col-lg-6">
+                
+            </div>   
     </div>
     
     
