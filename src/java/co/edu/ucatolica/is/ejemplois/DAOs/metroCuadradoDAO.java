@@ -26,11 +26,8 @@ public class metroCuadradoDAO {
         metroCuadradoDTO p=new metroCuadradoDTO();
         try {            
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();                        
-            String query = "SELECT * FROM estate WHERE proceso=?, tipo=?, lugar=?";
+            String query = "SELECT * FROM estate";
             PreparedStatement preparedStmt = conn.prepareStatement(query);
-            preparedStmt.setString(1, p.getProceso());
-            preparedStmt.setString(2, p.getTipo());
-            preparedStmt.setString(3, p.getLugar());
             ResultSet rs = preparedStmt.executeQuery();
             metroCuadradoDTO datos[]= new metroCuadradoDTO[20];
             while(rs.next()){

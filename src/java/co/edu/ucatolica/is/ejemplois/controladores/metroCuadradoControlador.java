@@ -6,12 +6,13 @@
 package co.edu.ucatolica.is.ejemplois.controladores;
 
 import co.edu.ucatolica.is.ejemplois.DAOs.metroCuadradoDAO;
-import co.edu.ucatolica.is.ejemplois.DTOs.PersonaDTO;
 import co.edu.ucatolica.is.ejemplois.DTOs.metroCuadradoDTO;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,17 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author sala1
  */
-public class metroCuadradoControlador {
-    
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+public class metroCuadradoControlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //HttpSession sesion = request.getSession();
@@ -38,15 +29,14 @@ public class metroCuadradoControlador {
         String pag = "";
         String oper = request.getParameter("buscar");
         metroCuadradoDAO pdao = new metroCuadradoDAO();
-
         ArrayList<metroCuadradoDTO> lista = pdao.consultarInmuebles();
+            
+            System.out.println("lista: " + lista.size());
+            
+            //sesion.setAttribute("listap", lista);
+            request.setAttribute("listap", lista);  
 
-        System.out.println("lista: " + lista.size());
-
-        //sesion.setAttribute("listap", lista);
-        request.setAttribute("listap", lista);             
-
-        pag = "./metroCuadrado/inmueble_consultar.jsp";
+        pag = "./metroCuadrado/mostrar.jsp";
 
         
         
@@ -55,7 +45,6 @@ public class metroCuadradoControlador {
         
         
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -65,6 +54,7 @@ public class metroCuadradoControlador {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -78,6 +68,7 @@ public class metroCuadradoControlador {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -88,6 +79,7 @@ public class metroCuadradoControlador {
      *
      * @return a String containing servlet description
      */
+    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>

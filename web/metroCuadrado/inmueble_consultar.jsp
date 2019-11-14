@@ -1,11 +1,3 @@
-<%-- 
-    Document   : InAlpes
-    Created on : 13/09/2019, 04:43:10 PM
-    Author     : sala8
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Metro Cuadrado</title>

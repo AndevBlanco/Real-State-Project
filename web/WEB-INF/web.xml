@@ -9,7 +9,7 @@
         <servlet-class>co.edu.ucatolica.is.ejemplois.controladores.inmueble</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>metroCuadrado</servlet-name>
+        <servlet-name>metroCuadradoControlador</servlet-name>
         <servlet-class>co.edu.ucatolica.is.ejemplois.controladores.metroCuadradoControlador</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -21,8 +21,8 @@
         <url-pattern>/inmueble</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>metroCuadrado</servlet-name>
-        <url-pattern>/metroCuadado</url-pattern>
+        <servlet-name>metroCuadradoControlador</servlet-name>
+        <url-pattern>/metroCuadradoControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
