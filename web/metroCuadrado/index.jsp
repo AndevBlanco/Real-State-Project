@@ -50,55 +50,73 @@
                 <h2 id="titu">ENCUENTRA INMUEBLES EN VENTA Y ARRIENDO:</h2>
                 <form class="form col-lg-12" id="formu">
                     <div class="form-group form-inline">
-                        <select class="form-control col-lg-3" id="buy">
-                            <option>Compra Nuevo</option>
-                            <option>Compra Usado</option>
-                            <option>Compra Nuevo y Usado</option>
-                            <option>Arriendo</option>
+                        <select class="form-control col-lg-3" id="proceso">
+                            <option value="comprarnuevo">Compra Nuevo</option>
+                            <option value="comprarusado">Compra Usado</option>
+                            <option value="comprarnuevoyusado">Compra Nuevo y Usado</option>
+                            <option value="arriendo">Arriendo</option>
                         </select>
-                        <select class="form-control col-lg-3" id="tip">
-                            <option>Apartamentos</option>
-                            <option>Oficinas</option>
-                            <option>Bodegas</option>
-                            <option>Consultorios</option>
-                            <option>Locales</option>
-                            <option>Lotes</option>
-                            <option>Fincas</option>
+                        <select class="form-control col-lg-3" id="tipo">
+                            <option value="apartamento">Apartamentos</option>
+                            <option value="oficina">Oficinas</option>
+                            <option value="bodega">Bodegas</option>
+                            <option value="consultorio">Consultorios</option>
+                            <option value="local">Locales</option>
+                            <option value="lote">Lotes</option>
+                            <option value="finca">Fincas</option>
                         </select>
-                        <input class="form-control col-lg-3" type="text" id="tipot" placeholder="Ciudad, Zona o Barrio">
-                        <button class="btn btn-danger col-lg-3" type="button">BUSCAR INMUEBLE</button>
+                        <input class="form-control col-lg-3" type="text" id="lugar" placeholder="Ciudad, Zona o Barrio">
+                        <button class="m_btn_alt inline_alt col-lg-3" type="button" name="buscar">BUSCAR INMUEBLE</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="container-fluid" id="car">
-            <div class="col-lg-6">
-                <div class="form-group form-inline">
-                    <h4>INMUEBLES DESTACADOS</h4>
+            <div class="col-lg-12">
+                <div class="form-group" id="cardd">
                     <form class="form form-inline">
-                        <div class="card border-primary" id="" style="width: 18rem;">
-                            <img src="./img/logo_metrocuadrado@2x.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="form-inline col-lg-6">
+                            <h4>INMUEBLES DESTACADOS</h4>
+                            <div class="card border-danger" id="cardfav1" style="width: 18rem;">
+                                <img src="./img/venta_bogota_15_1563501715_335x530.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-danger">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card border-danger" id="cardfav2" style="width: 18rem;">
+                                <img src="./img/venta_bogota_15_1563501715_335x530.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-danger">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="card border-primary" style="width: 18rem;">
-                            <img src="./img/logo_metrocuadrado@2x.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="form-inline col-lg-6">
+                            <h4>INMUEBLES RECOMENDADOS</h4>
+                            <div class="card border-primary" id="cardrec1" style="width: 18rem;">
+                                <img src="./img/venta_bogota_15_1563501715_335x530.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card border-primary" id="cardrec2" style="width: 18rem;">
+                                <img src="./img/venta_bogota_15_1563501715_335x530.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                
-            </div>   
+            </div>  
     </div>
     
     

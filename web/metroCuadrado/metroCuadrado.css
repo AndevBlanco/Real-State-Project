@@ -19,9 +19,37 @@ nav li a{
 #formu{
     margin: auto;
 }
-#buy, #tip, #tipot{
-    margin-right: 1%;
+#proceso, #tipo, #lugar{
+    margin-right: 8%;
 }
-#car.card{
-    margin-right: 1%;
+#cardfav1, #cardrec1{
+    margin-right: 2%;
+}
+.card-img-top{
+    height: 100%;
+    width:50%;
+}
+#cardd{
+    margin-top: 2%;
+    margin-left: 7%;
+}
+h4{
+    padding-left: 20%;
+    padding-bottom: 2%;
+}
+.m_btn_alt {
+    background: #ff8700;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 14px 20px 16px;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 35%;
+}
+#containcon{
+    margin-top: 2%;
 }
