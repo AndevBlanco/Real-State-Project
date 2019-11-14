@@ -28,8 +28,16 @@ public class metroCuadradoControlador extends HttpServlet {
         
         String pag = "";
         String oper = request.getParameter("buscar");
+        String proc = request.getParameter("proceso");
+        String tip = request.getParameter("tipo");
+        String lug = request.getParameter("lugar");
+        metroCuadradoDTO p = new metroCuadradoDTO();
         metroCuadradoDAO pdao = new metroCuadradoDAO();
-        ArrayList<metroCuadradoDTO> lista = pdao.consultarInmuebles();
+        p.setProceso(proc);
+        p.setTipo(tip);
+        p.setLugar(lug);
+        
+        ArrayList<metroCuadradoDTO> lista = pdao.consultarInmuebles(p);
             
             System.out.println("lista: " + lista.size());
             

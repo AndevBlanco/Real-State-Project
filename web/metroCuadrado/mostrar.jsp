@@ -32,7 +32,7 @@
                 {
                     metroCuadradoDTO p = lista.get(i);
 
-        %>
+        %>4
         <table>
             <tbody>
                 <tr>

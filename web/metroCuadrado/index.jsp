@@ -50,13 +50,13 @@
                 <h2 id="titu">ENCUENTRA INMUEBLES EN VENTA Y ARRIENDO:</h2>
                 <form class="form col-lg-12" id="formu" action="../metroCuadradoControlador">
                     <div class="form-group form-inline">
-                        <select class="form-control col-lg-3" id="proceso">
+                        <select class="form-control col-lg-3" name="proceso" id="proce">
                             <option value="comprarnuevo">Compra Nuevo</option>
                             <option value="comprarusado">Compra Usado</option>
                             <option value="comprarnuevoyusado">Compra Nuevo y Usado</option>
                             <option value="arriendo">Arriendo</option>
                         </select>
-                        <select class="form-control col-lg-3" id="tipo">
+                        <select class="form-control col-lg-3" name="tipo" id="tipoo">
                             <option value="apartamento">Apartamentos</option>
                             <option value="oficina">Oficinas</option>
                             <option value="bodega">Bodegas</option>
@@ -65,8 +65,8 @@
                             <option value="lote">Lotes</option>
                             <option value="finca">Fincas</option>
                         </select>
-                        <input class="form-control col-lg-3" type="text" id="lugar" placeholder="Ciudad, Zona o Barrio">
-                        <button class="btn btn-success col-lg-3" type="submit" name="buscar">BUSCAR INMUEBLE</button>
+                        <input class="form-control col-lg-3" type="text" name="lugar" id="luga" placeholder="Ciudad, Zona o Barrio"/>
+                        <button class="btn btn-success col-lg-3" type="submit" name="buscar" id="busc">BUSCAR INMUEBLE</button>
                     </div>
                 </form>
             </div>
