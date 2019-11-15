@@ -37,14 +37,10 @@ public class metroCuadradoControlador extends HttpServlet {
         p.setTipo(tip);
         p.setLugar(lug);
         
-        ArrayList<metroCuadradoDTO> lista = pdao.consultarInmuebles(p);
-            
-            System.out.println("lista: " + lista.size());
-            
-            //sesion.setAttribute("listap", lista);
-            request.setAttribute("listap", lista);  
+        String lista = pdao.consultarInmuebles(p);
+        request.setAttribute("listap", lista);  
 
-        pag = "./metroCuadrado/mostrar.jsp";
+        pag = "./metroCuadrado/inmueble_consultar.jsp";
 
         
         

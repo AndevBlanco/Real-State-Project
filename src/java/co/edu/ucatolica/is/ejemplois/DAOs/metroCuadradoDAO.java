@@ -21,8 +21,9 @@ import java.util.logging.Logger;
  * @author sala1
  */
 public class metroCuadradoDAO {
-    public ArrayList<metroCuadradoDTO> consultarInmuebles(metroCuadradoDTO y){
+    public String consultarInmuebles(metroCuadradoDTO y){
         ArrayList<metroCuadradoDTO> lista = new ArrayList<metroCuadradoDTO>();
+        String script="";
         try {            
             Connection conn = ConexionBDs.getMysqlDataSource().getConnection();                        
             String query = "SELECT * FROM estate where proceso=? and tipo=? and lugar=?";
@@ -39,20 +40,31 @@ public class metroCuadradoDAO {
                 p.setBaño(rs.getInt("baños"));
                 p.setGaraje(rs.getInt("garajes"));
                 p.setLugar(rs.getString("lugar"));
-                p.setProceso("Nuevo");
+                p.setProceso(rs.getString("proceso"));
                 p.setTipo(rs.getString("tipo"));
-
-                
-                lista.add(p);
+                String f="./metroCuadrado/img/desktop.jpg";
+                script=script+"<div class=\"card mb-3 border border-warning\" style=\"max-width: 100%;\">\n" +
+                        "            <div class=\"row no-gutters\" id=\"lascars\">\n" +
+                        "              <div class=\"col-md-4\">\n" +
+                        "                  <img src='"+f+"' class=\"card-img\" alt=\"...\">\n" +
+                        "              </div>\n" +
+                        "              <div class=\"col-md-8\">\n" +
+                        "                <div class=\"card-body\">\n" +
+                        "                  <h5 class=\"card-title\">"+p.getPrecio()+"</h5>\n" +
+                        "                  <p class=\"card-text\"> "+p.getTipo()+" "+p.getProceso()+" ubicado en "+p.getLugar()+" cuenta con: "+p.getHabitacion()+" habitaciones, "+p.getBaño()+" baños, "+p.getGaraje()+"</p>\n" +
+                        "                  <p class=\"card-text\"><small class=\"text-muted\"> Area: "+p.getArea()+"</small></p>\n" +
+                        "                </div>\n" +
+                        "              </div>\n" +
+                        "            </div>\n" +
+                        "        </div>";
             }
-            
             conn.close();            
             
         } catch (SQLException ex) {
             Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return lista;
+        return script;
     }
 
 }
