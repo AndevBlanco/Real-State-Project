@@ -21,7 +21,7 @@
 <body>     
     <nav class="navbar navbar-expand-sm navbar-light bg-light" data-toggle="affix">
         <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-            <a href="https://www.metrocuadrado.com/"> <img alt="Metrocuadrado" src="./img/logo_metrocuadrado@2x.png" class="logo"/></a>
+            <a href="https://www.metrocuadrado.com/"> <img alt="Metrocuadrado" src="./metroCuadrado/img/logo_metrocuadrado@2x.png" class="logo"/></a>
             <div class="collapse navbar-collapse text-center" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -40,27 +40,7 @@
     <div class="container-fluid" id="containcon">
         <div class="row">
             <div class="col-lg-12">
-                <form class="form col-lg-12" id="formu">
-                    <div class="form-group form-inline">
-                        <select class="form-control col-lg-3" id="buy">
-                            <option>Compra Nuevo</option>
-                            <option>Compra Usado</option>
-                            <option>Compra Nuevo y Usado</option>
-                            <option>Arriendo</option>
-                        </select>
-                        <select class="form-control col-lg-3" id="tip">
-                            <option>Apartamentos</option>
-                            <option>Oficinas</option>
-                            <option>Bodegas</option>
-                            <option>Consultorios</option>
-                            <option>Locales</option>
-                            <option>Lotes</option>
-                            <option>Fincas</option>
-                        </select>
-                        <input class="form-control col-lg-3" type="text" id="tipot" placeholder="Ciudad, Zona o Barrio">
-                        <button class="m_btn_alt inline_alt col-lg-2" type="button">BUSCAR INMUEBLE</button>
-                    </div>
-                </form>
+               
             </div>
         </div>
     </div>

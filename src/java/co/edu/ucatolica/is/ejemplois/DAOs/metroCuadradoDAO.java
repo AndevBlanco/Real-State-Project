@@ -42,17 +42,17 @@ public class metroCuadradoDAO {
                 p.setLugar(rs.getString("lugar"));
                 p.setProceso(rs.getString("proceso"));
                 p.setTipo(rs.getString("tipo"));
-                String f="./metroCuadrado/img/desktop.jpg";
+                int f=(int) Math.floor(Math.random()*6+1);
                 script=script+"<div class=\"card mb-3 border border-warning\" style=\"max-width: 100%;\">\n" +
                         "            <div class=\"row no-gutters\" id=\"lascars\">\n" +
                         "              <div class=\"col-md-4\">\n" +
-                        "                  <img src='"+f+"' class=\"card-img\" alt=\"...\">\n" +
+                        "                  <img src='./metroCuadrado/img/"+f+".jpg' class=\"card-img\" alt=\"...\">\n" +
                         "              </div>\n" +
                         "              <div class=\"col-md-8\">\n" +
                         "                <div class=\"card-body\">\n" +
-                        "                  <h5 class=\"card-title\">"+p.getPrecio()+"</h5>\n" +
-                        "                  <p class=\"card-text\"> "+p.getTipo()+" "+p.getProceso()+" ubicado en "+p.getLugar()+" cuenta con: "+p.getHabitacion()+" habitaciones, "+p.getBaño()+" baños, "+p.getGaraje()+"</p>\n" +
-                        "                  <p class=\"card-text\"><small class=\"text-muted\"> Area: "+p.getArea()+"</small></p>\n" +
+                        "                  <h5 style=\"font-size:30px;\" class=\"card-title\">"+p.getPrecio()+"</h5>\n" +
+                        "                  <p style=\"font-size:20px;\" class=\"card-text\"> "+p.getTipo()+" ubicado en "+p.getLugar()+" cuenta con: "+p.getHabitacion()+" habitaciones, "+p.getBaño()+" baños, "+p.getGaraje()+" garajes</p>\n" +
+                        "                  <p style=\"font-size:30px;\" class=\"card-text\"><small class=\"text-muted\"> Area: "+p.getArea()+"</small></p>\n" +
                         "                </div>\n" +
                         "              </div>\n" +
                         "            </div>\n" +
